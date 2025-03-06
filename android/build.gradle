@@ -1,26 +1,29 @@
-
 buildscript {
     repositories {
-        jcenter()
+        google()  // Use Google’s Maven repository for updated Android tools
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        // Update to the latest stable version of Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:7.0.4'  // Latest version (you can verify from official docs)
+        classpath 'com.facebook.react:react-native-gradle-plugin:0.71.0'  // Update this according to your React Native version
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 33  // Update to latest compile SDK version
+    buildToolsVersion "33.0.0"  // Update to latest build tools version
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 33  // Update to latest target SDK version
         versionCode 1
         versionName "1.0"
     }
+
     lintOptions {
         abortOnError false
     }
@@ -28,10 +31,10 @@ android {
 
 repositories {
     mavenCentral()
+    google()  // Always ensure Google’s repository is included
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile "com.android.billingclient:billing:6.1.0"
+    implementation 'com.facebook.react:react-native:+'
+    implementation "com.android.billingclient:billing:7.0.0"  // Update to the latest version of Billing Client
 }
-  

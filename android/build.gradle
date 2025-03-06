@@ -32,6 +32,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile "com.android.billingclient:billing:1.2.2"
+    compile "com.android.billingclient:billing:6.1.0"
 }
   

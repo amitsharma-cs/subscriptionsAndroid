@@ -1,25 +1,29 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNSubscriptionsAndroid } = NativeModules;
+// const { RNSubscriptionsAndroid } = NativeModules;
+const { BillingModule } = NativeModules;
 
 class InAppBilling {
 
     static initBilling(products, callback) {
-        return RNSubscriptionsAndroid.initBillingClient(products,callback);
-      }
+      return BillingModule.initBillingClient(products,callback);
+    }
 
-      static getProducts(callback) {
-        return RNSubscriptionsAndroid.loadSubscriptionProducts(callback);
-      }
+    // static initBilling(products, callback) {
+    //     return RNSubscriptionsAndroid.initBillingClient(products,callback);
+    //   }
+    //   static getProducts(callback) {
+    //     return RNSubscriptionsAndroid.loadSubscriptionProducts(callback);
+    //   }
 
-      static subscribeTo(oldProductId = null,productId,prorationMode = 1, callback) {
-        return RNSubscriptionsAndroid.subscribeTo(oldProductId,productId,prorationMode, callback);
-      }
+    //   static subscribeTo(oldProductId = null,productId,prorationMode = 1, callback) {
+    //     return RNSubscriptionsAndroid.subscribeTo(oldProductId,productId,prorationMode, callback);
+    //   }
 
-      static subscribeToPlan(oldProductId = null,productId,prorationMode = 1, callback) {
-        return RNSubscriptionsAndroid.subscribeToPlan(oldProductId,productId,prorationMode, callback);
-      }
+    //   static subscribeToPlan(oldProductId = null,productId,prorationMode = 1, callback) {
+    //     return RNSubscriptionsAndroid.subscribeToPlan(oldProductId,productId,prorationMode, callback);
+    //   }
 
 }
 

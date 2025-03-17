@@ -9,14 +9,11 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-
-import main.java.com.dhanraj.BillingModule;
-
 import com.facebook.react.bridge.JavaScriptModule;
 public class RNSubscriptionsAndroidPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new BillingModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNSubscriptionsAndroidModule(reactContext));
     }
 
     // Deprecated from RN 0.47

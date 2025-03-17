@@ -1,4 +1,4 @@
-package main.java.com.dhanraj;
+package com.dhanraj;
 
 import android.app.Activity;
 import android.util.Log;
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BillingModule extends ReactContextBaseJavaModule {
+public class RNSubscriptionsAndroidModule extends ReactContextBaseJavaModule {
     private static final String TAG = "BillingModule";
     private BillingClient billingClient;
     private Promise purchasePromise;
 
-    public BillingModule(ReactApplicationContext reactContext) {
+    public RNSubscriptionsAndroidModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 

@@ -1,7 +1,7 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNSubscriptionsAndroid, BillingModule } = NativeModules;
+const { RNSubscriptionsAndroid } = NativeModules;
 
 class InAppBilling {
 
@@ -22,15 +22,15 @@ class InAppBilling {
     //   }
     
     static initBilling() {
-      return BillingModule.initializeBillingClient();
+      return RNSubscriptionsAndroid.initializeBillingClient();
     }
 
     static getProducts(products) {
-      return BillingModule.fetchProducts(products);
+      return RNSubscriptionsAndroid.fetchProducts(products);
     }
 
     static subscribeTo(productId) {
-      return BillingModule.purchaseSubscription(productId);
+      return RNSubscriptionsAndroid.purchaseSubscription(productId);
     } 
 
 }

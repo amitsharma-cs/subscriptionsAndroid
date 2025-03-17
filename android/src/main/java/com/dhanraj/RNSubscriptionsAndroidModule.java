@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RNSubscriptionsAndroidModule extends ReactContextBaseJavaModule {
-    private static final String TAG = "BillingModule";
+    private static final String TAG = "RNSubscriptionsAndroid";
     private BillingClient billingClient;
     private Promise purchasePromise;
 
@@ -23,7 +23,7 @@ public class RNSubscriptionsAndroidModule extends ReactContextBaseJavaModule {
     @NonNull
     @Override
     public String getName() {
-        return "BillingModule";
+        return "RNSubscriptionsAndroid";
     }
 
     // Expose initializeBillingClient as a React Method

@@ -1,6 +1,9 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.dhanraj">
-
+    <application>
+        <service android:name="com.android.billingclient.api.BillingService"
+                 android:permission="android.permission.BILLING" />
+    </application>
 </manifest>
   
